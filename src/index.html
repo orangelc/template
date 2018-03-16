@@ -45,17 +45,28 @@
   <script src='assets/js/locale/es-do.js'></script>
 
   <script>
-    function openTracking() {
-      $('#seg').collapse('toggle');
+    function openTracking(seg) {
+      $('#' + seg).collapse('toggle');
     }
   </script>
   <script>
 
     $(document).ready(function () {
 
+      function setHeight() {
+        windowHeight = $(window).innerHeight();
+        $('.detalle-seguimiento').css('height', windowHeight - 400);
+      };
+      setHeight();
+
+      $(window).resize(function () {
+        setHeight();
+      });
+
       $('#calendar').fullCalendar({
         defaultDate: '2018-03-12',
         editable: true,
+        height: 650,
         eventLimit: true, // allow "more" link when too many events
         events: [
           {
@@ -121,6 +132,19 @@
 
           // change the border color just for fun
           $(this).css('border-color', 'red');
+
+        },
+        dayClick: function (date, jsEvent, view) {
+
+          alert('Clicked on: ' + date.format());
+
+          alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+
+          alert('Current view: ' + view.name);
+
+          // change the day's background color just for fun
+          $(this).css('background-color', 'red');
+          $(this).add("<h1>Hola</h1>");
 
         }
       }

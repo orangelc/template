@@ -37,16 +37,16 @@
                   <th>#</th>
                   <th>First</th>
                   <th>Last</th>
-                  <th>Handle</th>
+                  <th>Email</th>
                   <th class="text-center" style="width: 10%;">Actions</th>
                 </tr>
               </thead>
               <tbody>
-                <tr onclick="openTracking();">
+                <tr onclick="openTracking('seg1');">
                   <td>1</td>
                   <td>Mark</td>
                   <td>Otto</td>
-                  <td>@mdo</td>
+                  <td>mark.otto@mail.com</td>
                   <td class="text-center">
                     <div class="dropdown show">
                       <a id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -62,13 +62,40 @@
                 </tr>
                 <tr>
                   <td colspan="5" style="padding: 0; width: 10%;">
-                    <div class="collapse" id="seg">
-                      <div class="card card-body" style="border-radius: 0;">
-                        DETALLE DEL SEGUIMIENTO
+                    <div class="collapse" id="seg1">
+                      <div class="card card-body detalle-seguimiento" style="border-radius: 0;">
+                        DETALLE DEL SEGUIMIENTO 1
                       </div>
                     </div>
                   </td>
                 </tr>
+                <tr onclick="openTracking('seg2');">
+                    <td>2</td>
+                    <td>Edward</td>
+                    <td>Walter</td>
+                    <td>edward.walter@mail.com</td>
+                    <td class="text-center">
+                      <div class="dropdown show">
+                        <a id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="5" style="padding: 0; width: 10%;">
+                      <div class="collapse" id="seg2">
+                        <div class="card card-body detalle-seguimiento" style="border-radius: 0;">
+                          DETALLE DEL SEGUIMIENTO 2
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
               </tbody>
             </table>
           </div>
