@@ -53,14 +53,16 @@
 
     $(document).ready(function () {
 
-      function setHeight() {
+      function setHeight(div, excedente) {
         windowHeight = $(window).innerHeight();
-        $('.detalle-seguimiento').css('height', windowHeight - 400);
+        $(div).css('height', windowHeight - excedente);
       };
-      setHeight();
+      setHeight(".detalle-seguimiento", 400);
+      setHeight(".tabla-registros", 250);
 
       $(window).resize(function () {
-        setHeight();
+        setHeight(".detalle-seguimiento", 400);
+      setHeight(".tabla-registros", 250);
       });
 
       $('#calendar').fullCalendar({

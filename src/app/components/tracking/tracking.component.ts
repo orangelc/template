@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var $: any;
+
 @Component({
   selector: 'app-tracking',
   templateUrl: './tracking.component.html',
@@ -11,5 +13,6 @@ export class TrackingComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }

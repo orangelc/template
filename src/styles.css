@@ -1,1 +1,17 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+
+/* SCROLL DE LAS TABLAS */
+
+.scroll-table {
+  overflow-y:scroll;
+  height:300px;
+}
+
+.scroll-table table {
+ width:100%;
+ background-color:#fff;
+}
+
+/* SCROLL DE LAS TABLAS */
+
