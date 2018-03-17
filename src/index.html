@@ -53,22 +53,27 @@
 
     $(document).ready(function () {
 
+      //Ajuste de alto de controles
+
       function setHeight(div, excedente) {
         windowHeight = $(window).innerHeight();
         $(div).css('height', windowHeight - excedente);
       };
       setHeight(".detalle-seguimiento", 400);
-      setHeight(".tabla-registros", 250);
+      setHeight(".tabla-registros", 350);
 
       $(window).resize(function () {
         setHeight(".detalle-seguimiento", 400);
-      setHeight(".tabla-registros", 250);
+        setHeight(".tabla-registros", 350);
       });
+
+      //Ajuste de alto de controles
+
+      //Configuración y eventos de FullCalendar
 
       $('#calendar').fullCalendar({
         defaultDate: '2018-03-12',
         editable: true,
-        height: 650,
         eventLimit: true, // allow "more" link when too many events
         events: [
           {
@@ -151,6 +156,8 @@
         }
       }
       );
+
+      //Configuración y eventos de FullCalendar
 
     });
 
